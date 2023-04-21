@@ -1,0 +1,46 @@
+<hr>
+<h3 id="subtituloExperiencia">Proyectos</h3>
+<div class="container">
+    <div id="iconos" *ngIf="loged == true"><span class="material-icons" (click)="modificar()">
+        create
+        </span>
+        <span class="material-icons" (click)="deleteProyecto()">
+            delete_forever
+            </span>
+            <span class="material-icons" (click)="agregarProyecto()" >
+                add_circle_outline
+                </span>
+        </div> 
+    
+    <table class="table table-responsive table-hover">
+        <thead class="table-dark ">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Link</th>
+            
+        </tr>
+        </thead>
+        <tbody class="table-secondary" *ngFor=" let proyectos of proyecto">
+        <tr>
+            <th scope="row">{{proyectos.id}}</th>
+            <td>{{proyectos.nombre}}</td>
+            <td>{{proyectos.descripcion}}</td>
+            <td>
+                <div *ngIf="delete == true"><button type="button" class="btn-close btn-close-black" aria-label="Close" id="closeExperiencia" (click)="eliminarProyecto(proyectos.id)">
+
+                </button>
+            </div>
+            <div *ngIf="modificarToggle == true"><span class="material-icons" id="modificar" [routerLink]="['/proyectoModal', proyectos.id]" >
+                create
+                </span>
+            </div>
+            <a target="_blank" href={{proyectos.url}}>{{proyectos.nombre}}</a>
+            
+            </td>
+            
+        </tr>
+        
+    </table>
+</div>

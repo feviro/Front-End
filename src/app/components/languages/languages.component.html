@@ -1,0 +1,43 @@
+<!-- Componente de soft skills con los circulos de progreso -->
+<hr>
+    <div class="container db" >
+        <div id="iconos" *ngIf="loged == true"><span class="material-icons" (click)="modificarSkills()">
+            create
+            </span>
+            <span class="material-icons" (click)="deleteSkill()">
+                delete_forever
+                </span>
+                <span class="material-icons" (click)="agregarSkill()" >
+                    add_circle_outline
+                    </span>
+            </div> 
+        <div class="row" >
+            <div class="col" *ngFor="let habilidades of habilidad">
+                    <div id="iconos" *ngIf="editarSkill == true"><span class="material-icons" [routerLink]="['/softSkillModal', habilidades.id]">
+                        create
+                        </span>
+                      </div>
+                <div *ngIf="delete == true"> <button type="button" class="btn-close btn-close-dark" aria-label="Close" id="closeExperiencia" (click)="eliminarSkill(habilidades.id)"></button></div>
+                <h5 class="title">{{habilidades.nombre}}</h5>
+                <div class="progress" attr.data-percentage = "{{habilidades.progreso}}">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">
+                        <div>
+                            {{habilidades.progreso}}%<br>
+                            <span>completado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+                
+            
+        </div>
+    </div>

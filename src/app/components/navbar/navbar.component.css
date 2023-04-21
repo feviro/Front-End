@@ -1,0 +1,35 @@
+.btn-group{
+
+    display: flex;
+    justify-content: space-between;
+    margin-right: 3%;
+
+
+}
+.Social_Media {
+
+    margin-left: 2px;
+
+}
+SVG{
+    fill: black;
+    padding-right: 15%;
+}
+.navbar{
+    border-bottom: 1px solid black;
+}
+
+.nav-item a{
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 3%;
+}
+
+.navbar-brand{
+    display: flex;
+    margin-left: 1%;
+}
+
+
+

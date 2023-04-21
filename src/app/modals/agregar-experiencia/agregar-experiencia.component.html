@@ -1,0 +1,31 @@
+<div id="modal">
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <div id="close">
+      <button type="button" class="btn-close btn-close-white" aria-label="Close"  (click)="closeModal()"> </button>
+    </div>
+       
+        <h4>Agregar</h4>
+
+        <input name="titulo" placeholder="Titulo" formControlName="titulo" [(ngModel)]="titulo" class="name" required />
+        <div *ngIf= "Titulo?.errors && Titulo?.touched">
+          <p *ngIf="Titulo?.hasError('required')"> El titulo es requerido</p>
+          <p *ngIf="Titulo?.hasError('minLength')"> El titulo debe tener al menos 4 caracteres</p>
+        </div>
+    
+        <input name="descripcion" placeholder="Descripcion" formControlName="decripcion" [(ngModel)]="descripcion" class="name"/>
+        <div *ngIf= "Descripcion?.errors && Descripcion?.touched">
+          <p *ngIf="Descripcion?.hasError('required')"> La descripcion es requerida</p>
+          <p *ngIf="Descripcion?.hasError('maxLength')"> La descripcion no debe tener mas de 255 caracteres.</p>
+        </div>
+        <input name="fecha" type="date" placeholder="Periodo de experiencia" formControlName="periodoComienzo" [(ngModel)]="periodoComienzo" class="name"/>
+        <input name="fecha" type="date" placeholder="Periodo de experiencia" formControlName="periodoFinal" [(ngModel)]="periodoFinal" class="name"/>
+        <input name="foto" placeholder="Imagen de la empresa (link)" formControlName="foto" [(ngModel)]="foto" class="name"/>
+        <div *ngIf= "Foto?.errors && Foto?.touched">
+          <p *ngIf="Foto?.hasError('required')"> La foto es requerida</p>
+        </div>
+        <input name="link" placeholder="Agrega el link de la empresa" formControlName="link" [(ngModel)]="link" class="name"/>
+        <input name="submit" class="btn" type="submit" value="Enviar" />
+      </form>
+    </div>
+
+

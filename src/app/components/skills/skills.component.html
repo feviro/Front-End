@@ -1,0 +1,29 @@
+<hr>
+<div class="container">
+    <h3 id="subtituloExperiencia">Hard skills</h3>
+    <div id="iconos" *ngIf="loged == true">
+        <span class="material-icons" (click)="modificarSkills()">
+        create
+        </span>
+        <span class="material-icons" (click)="deleteSkill()">
+            delete_forever
+            </span>
+            <span class="material-icons" (click)="desplegarAgregarSkill()">
+                add_circle_outline
+                </span>
+        </div> 
+            <div *ngFor="let skills of skill">
+    
+    <div (click)="eliminarSkill(skills.id)"><button type="button" *ngIf="delete == true" class="btn-close btn-close-dark" aria-label="Close" id="closeExperiencia" ></button>
+    </div> 
+    <div>
+    <span *ngIf="editarSkill == true" id="iconoEditar" class="material-icons" [routerLink]="['skillModal/', skills.id]">
+        create
+        </span>
+    <h4 class="skillTitle">{{skills.nombre}} <img [src]="skills.logo" alt="{{skills.nombre}} logo" class="skillImage"></h4>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated {{skills.color}} col-lg-8" role="progressbar" aria-label="Animated striped example " aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width.%]="[skills.progreso]">{{skills.progreso}}%</div> 
+            </div> 
+        </div>
+       
+ </div>

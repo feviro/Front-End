@@ -1,0 +1,33 @@
+
+<div id="modal" class="container-fluid" *ngIf="experiencia">
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+          <div id="close">
+        <button type="button" class="btn-close btn-close-white" aria-label="Close"  routerLink=""> </button>
+      </div>
+
+        <h4>Modificar</h4>
+
+        <div>
+          <input name="titulo" placeholder="Modifica el titulo" formControlName="titulo" [(ngModel)]="experiencia.titulo" class="name" required />
+          <div *ngIf= "Titulo?.errors && Titulo?.touched">
+            <p *ngIf="Titulo?.hasError('required')"> El titulo es requerido</p>
+            <p *ngIf="Titulo?.hasError('minLength')"> El titulo debe tener al menos 4 caracteres</p>
+          </div>
+      
+          <input name="descripcion" placeholder="modifica la descripcion" formControlName="decripcion" [(ngModel)]="experiencia.descripcion" class="name"/>
+          <div *ngIf= "Descripcion?.errors && Descripcion?.touched">
+            <p *ngIf="Descripcion?.hasError('required')"> La descripcion es requerida.</p>
+            <p *ngIf="Descripcion?.hasError('maxLength')"> No debe sobrepasar los 200 caracteres. </p>
+          </div>
+          <input name="fecha" type="date" placeholder="modifica el periodo" formControlName="periodoComienzo" [(ngModel)]="experiencia.periodoComienzo" class="name"/>
+          <input name="fecha" type="date" placeholder="modifica el periodo" formControlName="periodoFinal" [(ngModel)]="experiencia.periodoFinal" class="name"/>
+          <input name="foto" placeholder="imagen de la empresa (link)" formControlName="foto" [(ngModel)]="experiencia.imagen" class="name"/>
+          <div *ngIf= "Foto?.errors && Foto?.touched">
+            <p *ngIf="Foto?.hasError('required')"> La foto es requerida</p>
+          </div>
+          <input name="link" placeholder="Coloca el link de la empresa" formControlName="link" [(ngModel)]="experiencia.link" class="name"/>
+          <input name="submit" class="btn" type="submit" value="Enviar" />
+          </div>
+        </form>
+      </div>
+

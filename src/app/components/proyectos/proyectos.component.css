@@ -1,0 +1,34 @@
+.container{
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+.material-icons{
+    color: #181a1b;
+    font-size: 22px;
+    display: flex;
+}
+#iconos {
+
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+    cursor: pointer;
+}
+.btn-close{
+    float: right;
+    
+}
+#subtituloExperiencia{
+    margin-left: 12%;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #181a1b;
+    
+}
+
+#modificar{
+    float: right;
+    color: black;
+    cursor: pointer;
+}
+

@@ -1,0 +1,17 @@
+<div id="modal">
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <div id="close">
+      <button type="button" class="btn-close btn-close-white" aria-label="Close"  (click)="closeModal()"> </button>
+    </div>
+        
+        <h4>Agregar</h4>
+        <input name="nombre" placeholder="Nombre" formControlName="nombre" class="name" [(ngModel)]="nombre" required />
+            <div *ngIf= "Nombre?.errors && Nombre?.touched">
+            <p *ngIf="Nombre?.hasError('required')"> El Nombre es requerido</p>
+            <p *ngIf="Nombre?.hasError('minLength')"> El Nombre debe tener al menos 4 caracteres</p>
+            </div>
+        <input name="porcentaje" placeholder="Coloca el porcentaje" formControlName="porcentaje" class="name" [(ngModel)]="porcentaje"/>
+        <p *ngIf="Porcentaje.hasError('required')&& Porcentaje.touched"> El porcentaje es requerido.</p>
+        <input name="submit" class="btn" type="submit" value="Enviar" />
+      </form>
+    </div>

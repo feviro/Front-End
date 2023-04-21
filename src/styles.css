@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+hr{
+    height: 5px;
+    background-color: #F878F2;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-color: white;
+}

@@ -1,0 +1,33 @@
+<div id="modal">
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <div id="close">
+      <button type="button" class="btn-close btn-close-white" aria-label="Close"  (click)="closeModal()"> </button>
+    </div>
+        
+        <h4>Agregar</h4>
+
+        <input name="Nombre" placeholder="Agrega el nombre" formControlName="nombre" [(ngModel)]="nombre" class="name" required />
+        <div *ngIf= "Nombre?.errors && Nombre?.touched">
+          <p *ngIf="Nombre?.hasError('required')"> El Nombre es requerido</p>
+          <p *ngIf="Nombre?.hasError('minLength')"> El Nombre debe tener al menos 4 caracteres</p>
+        </div> 
+    
+        <input name="Porcentaje" placeholder="Agrega el porcentaje" formControlName="porcentaje" [(ngModel)]="porcentaje" class="name"/>
+        <p *ngIf="Porcentaje.errors && Porcentaje.touched">Porcentaje es requerido.</p>
+        <input name="Logo" placeholder="Imagen del skill (link)" formControlName="logo" [(ngModel)]="logo" class="name"/>
+        <p *ngIf="Logo.errors && Logo.touched">La imagen es requerida.</p>
+        <label for="color">Selecciona el color.</label>
+        <br>
+        <select name="Color" placeholder="Agrega el color" formControlName="color" [(ngModel)]="color" class="name" id="color">
+          <option value="bg-success" selected>verde</option>
+          <option value="bg-info">azul</option>
+          <option value="bg-warning">amarillo</option>
+          <option value="bg-danger">rojo</option>
+          <option value="bg-secondary">gris</option>
+          <option value="bg-dark">negro</option>
+        </select>
+        <p *ngIf="Color.errors && Color.touched">El color es requerido.</p>
+        <input name="submit" class="btn" type="submit" value="Enviar" />
+
+      </form>
+    </div>

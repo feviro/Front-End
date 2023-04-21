@@ -1,0 +1,35 @@
+<!-- Modifica el componente banner (Informacion personal) -->
+<div id="modal">
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <div id="close">
+        
+      <button type="button" class="btn-close btn-close-white" aria-label="Close"  routerLink=""> </button>
+    </div>
+
+      <h4>Modificar</h4>
+        <input name="titulo" placeholder="modifica el titulo" formControlName="titulo" class="name" [(ngModel)]="info.titulo" ngClass="{'is-invalid': Titulo.errors && Titulo.touched, 'is-valid': !Titulo.errors && !Titulo.touched }" />
+        <div *ngIf= "Titulo?.errors && Titulo?.touched">
+          <p> El titulo es requerido</p>
+          
+        </div>
+    
+        <input name="descripcion" placeholder="modifica la descripcion" formControlName="descripcion" [(ngModel)]="info.descripcion" class="name" ngClass="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && !Descripcion.touched }"/>
+        <div *ngIf= "Descripcion?.errors && Descripcion?.touched">
+          <p> La descripcion es requerida</p>
+        </div>
+        <input name="nombre" placeholder="modifica el nombre" formControlName="nombre" [(ngModel)]="info.nombre" class="name" ngClass="{'is-invalid': Nombre.errors && Nombre.touched, 'is-valid': !Nombre.errors && !Nombre.touched }"/>
+        <div *ngIf= "Nombre?.errors && Nombre?.touched">
+          <p *ngIf="Nombre?.hasError('required')"> El nombre es requerido</p>
+        </div>
+        <input name="foto" placeholder="Coloca la imagen de perfil" formControlName="foto" [(ngModel)]="info.foto" class="name" ngClass="{'is-invalid': Foto.errors && Foto.touched, 'is-valid': !Foto.errors && !Foto.touched }"/>
+        <div *ngIf= "Foto?.errors && Foto?.touched">
+          <p *ngIf="Foto?.hasError('required')"> La foto de perfil es requerida</p>
+        </div>
+        <input  name="banner" placeholder="Coloca el banner" formControlName="banner" [(ngModel)]="info.banner" class="name"/>
+        <div *ngIf= "Banner?.errors && Banner?.touched">
+          <p *ngIf="Banner?.hasError('required')"> El banner es requerido</p>
+        </div>
+        <input name="submit" class="btn" type="submit" value="Enviar" />
+    </form>
+</div>
+   

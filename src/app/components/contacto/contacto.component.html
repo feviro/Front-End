@@ -1,0 +1,19 @@
+
+<div id="modal">
+  <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <button type="button" class="btn-close btn-close-white" aria-label="Close" id="close" (click)="closeModal()"> </button>
+    <h4>Contacto</h4>
+      <input name="name" placeholder="¿Cual es tu nombre?" formControlName="nombre" class="name" [(ngModel)]="nombre" />
+      <div *ngIf= "Nombre?.errors && Nombre?.touched">
+        <p *ngIf="Nombre?.hasError('required')"> El Nombre es requerido</p>
+        <p *ngIf="Nombre?.hasError('minLength')"> El Nombre debe tener al menos 4 caracteres</p>
+      </div>
+      <input name="emailaddress" placeholder="Introduce tu mail" formControlName="mail" class="email" type="email" [(ngModel)]="mail" />
+      <div *ngIf= "Mail?.errors && Mail?.touched">
+        <p *ngIf="Mail?.hasError('required')"> El mail es requerido</p>
+        <p *ngIf="Mail?.hasError('email')"> El mail debe tener un formato valido</p>
+      </div>
+      <textarea rows="4" cols="50" name="subject" placeholder="mensaje" formControlName ="mensaje" class="message" [(ngModel)]="mensaje"></textarea>
+      <input name="submit" class="btn" type="submit" value="Enviar" />
+    </form>
+  </div>

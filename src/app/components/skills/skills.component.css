@@ -1,0 +1,72 @@
+hr{
+    height: 5px;
+    background-color: #F878F2;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-color: white;
+}
+#subtituloExperiencia{
+    margin-left: 100px;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #181a1b;
+    
+}
+
+.progress{
+    margin-bottom: 10px;
+    margin-left: 100px;
+    width: 70%;
+    background: rgb(182, 181, 181);
+    
+}
+
+.progress-bar{
+    color: #181a1b;
+    font-weight: bolder;
+}
+.skillTitle{
+    text-align: right;
+    margin-right: 350px;
+    margin-top: 60px;
+    color: #181a1b;
+}
+.skillImage{
+    height: 40px;
+    border-radius: 100%;
+    
+}
+
+.container{
+    margin-bottom: 100px;
+}
+.material-icons{
+    color:  #181a1b;
+    font-size: 22px;
+    
+    
+}
+#iconos {
+
+display: flex;
+justify-content: flex-end;
+
+z-index: 1;
+cursor: pointer;
+
+}
+.btn-close{
+    float: right;
+    margin-right: 18%;
+}
+
+#iconoEditar {
+
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 18%;
+    padding-top: 5%;
+    z-index: 1;
+    cursor: pointer;
+    
+    }

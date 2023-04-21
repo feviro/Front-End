@@ -1,0 +1,21 @@
+<div id="modal">
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <div id="close">
+      <button type="button" class="btn-close btn-close-white" aria-label="Close"  routerLink="/"> </button>
+    </div>
+
+      <h4>Modificar</h4>
+
+        <input name="Nombre" placeholder="modifica el nombre" formControlName="nombre" class="name" [(ngModel)]="proyecto.nombre"/>
+          <p *ngIf="Nombre?.hasError('required') && Nombre.touched"> El Nombre es requerido</p>
+
+    
+        <input name="descripcion" placeholder="modifica la descripcion" formControlName="descripcion" class="name" [(ngModel)]="proyecto.descripcion"/>
+          <p *ngIf="Descripcion?.hasError('required') && Descripcion.touched">La descripcion es requerida.</p>
+        
+        <input name="link" placeholder="Coloca el link del proyecto" formControlName="link" class="name" [(ngModel)]="proyecto.url" />
+        <input name="submit" class="btn" type="submit" value="Enviar" />
+
+      </form>
+    </div>
+

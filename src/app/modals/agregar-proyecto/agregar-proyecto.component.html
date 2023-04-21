@@ -1,0 +1,22 @@
+<div id="modal">
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <div id="close">
+      <button type="button" class="btn-close btn-close-white" aria-label="Close"  (click)="closeModal()"> </button>
+    </div>
+        
+        <h4>Agregar</h4>
+      
+        <input name="Nombre" placeholder="agrega el nombre" formControlName="nombre" class="name" [(ngModel)]="nombre" />
+        <div *ngIf= "Nombre?.errors && Nombre?.touched">
+          <p *ngIf="Nombre?.hasError('required')"> El Nombre es requerido</p>
+          <p *ngIf="Nombre?.hasError('minLength')"> El Nombre debe tener al menos 4 caracteres</p>
+        </div>
+    
+        <input name="descripcion" placeholder="agrega una descripcion" formControlName="descripcion" class="name" [(ngModel)]="descripcion" />
+          <p *ngIf="Descripcion?.hasError('required') && Descripcion.touched"> La descripcion es requerida.</p>
+      
+        <input name="link" placeholder="Coloca el link del proyecto" formControlName="link" class="name" [(ngModel)]="link" />
+        <input name="submit" class="btn" type="submit" value="Enviar" />
+
+      </form>
+    </div>

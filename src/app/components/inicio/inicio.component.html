@@ -1,0 +1,44 @@
+<body>
+    <app-navbar></app-navbar>
+    <div class="cuerpo">
+    <app-banner></app-banner>
+    <app-acerca-de></app-acerca-de>
+    <app-skills></app-skills>
+    <app-languages></app-languages>
+    <app-proyectos></app-proyectos>
+    <br>
+    </div>
+    <app-footer></app-footer>
+    </body>
+    <div *ngIf="modalSwitch == true">
+        <app-contacto></app-contacto> 
+    </div>
+    <div *ngIf="loginSwitch == true">
+        <app-login></app-login>
+    </div>
+    <div *ngIf="modificarExperiencia == true">
+        <app-modificar-experiencia></app-modificar-experiencia>
+    </div>
+    <div *ngIf="modificarEducacion == true">
+        <app-modificar-educacion></app-modificar-educacion>
+    </div>
+    <div *ngIf="modificarInfo == true">
+        <app-modificar-info></app-modificar-info>
+    </div>
+    <div *ngIf="agregarSkills == true">
+        <app-agregar-hard-skill></app-agregar-hard-skill>
+    </div>
+    <div *ngIf="agregarSoft == true">
+        <app-agregar-soft-skill></app-agregar-soft-skill>
+    </div>
+    <div *ngIf="agregarProyecto == true">
+        
+        <app-agregar-proyecto></app-agregar-proyecto>
+    </div>
+    <div *ngIf="agregarExperiencia == true">
+        <app-agregar-experiencia></app-agregar-experiencia>
+    </div>
+    <div *ngIf="agregarEducacion == true">
+        <app-agregar-educacion></app-agregar-educacion>
+    </div>
+   
