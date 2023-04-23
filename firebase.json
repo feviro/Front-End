@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/frontend-portafolio-web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
