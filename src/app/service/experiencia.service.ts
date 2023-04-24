@@ -7,7 +7,7 @@ import { Experiencia } from '../entidades/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  url: string = "https://portfolioback-feviro.koyeb.app/experiencia";
+  url: string = "https://back-end-production-30b9.up.railway.app/experiencia";
 
   constructor(private http:HttpClient) {  }
 

@@ -8,7 +8,7 @@ import { Educacion } from '../entidades/educacion';
 })
 export class EducacionService {
 
-  url: string = "https://portfolioback-feviro.koyeb.app/educacion";
+  url: string = "https://back-end-production-30b9.up.railway.app/educacion";
 
   constructor(private http:HttpClient) { }
 

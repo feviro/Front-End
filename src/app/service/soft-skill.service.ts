@@ -7,7 +7,7 @@ import { SoftSkill } from '../entidades/soft-skill';
   providedIn: 'root'
 })
 export class SoftSkillService {
-  url: string = "https://portfolioback-feviro.koyeb.app/soft";
+  url: string = "https://back-end-production-30b9.up.railway.app/soft";
 
   constructor(private http:HttpClient) { }
 

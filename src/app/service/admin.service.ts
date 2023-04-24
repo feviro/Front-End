@@ -8,7 +8,7 @@ import { Admin } from '../entidades/admin';
 })
 export class AdminService {
 
-  url: string = "https://portfolioback-feviro.koyeb.app/admin";
+  url: string = "https://back-end-production-30b9.up.railway.app/admin";
 
   constructor(private http:HttpClient) { }
 
