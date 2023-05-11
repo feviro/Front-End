@@ -7,7 +7,7 @@ import { Contacto } from '../entidades/contacto';
   providedIn: 'root'
 })
 export class ContactoService {
-  url: string = "https://back-end-production-30b9.up.railway.app/contacto";
+  url: string = "https://backend-feviro.koyeb.app/contacto";
 
   constructor(private http:HttpClient) { }
 

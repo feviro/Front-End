@@ -7,7 +7,7 @@ import { Persona } from '../entidades/persona';
   providedIn: 'root'
 })
 export class PersonaService {
-  url: string = "https://back-end-production-30b9.up.railway.app/persona";
+  url: string = "https://backend-feviro.koyeb.app/persona";
 
   constructor(private http:HttpClient) { }
 

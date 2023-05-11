@@ -8,7 +8,7 @@ import { HardSkill } from '../entidades/hard-skill';
 })
 export class HardSkillService {
 
-  url: string = "https://back-end-production-30b9.up.railway.app/hardskill";
+  url: string = "https://backend-feviro.koyeb.app/hardskill";
 
   constructor(private http:HttpClient) { }
 

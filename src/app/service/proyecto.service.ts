@@ -7,7 +7,7 @@ import { Proyecto } from '../entidades/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  url: string = "https://back-end-production-30b9.up.railway.app/proyecto";
+  url: string = "https://backend-feviro.koyeb.app/proyecto";
 
   constructor(private http:HttpClient) { }
 
